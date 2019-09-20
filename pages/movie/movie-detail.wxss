@@ -1,0 +1,93 @@
+/* pages/movie/movie-detail.wxss */
+@import "../template/template.wxss";
+
+.movie-container{
+  padding: 30rpx;
+  background-color: #eee;
+}
+
+.movie-image{
+  width: 210rpx;
+  height: 300rpx;
+}
+
+.movie-info-container{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40rpx;
+}
+
+
+
+.movie-count image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.avatars image{
+  width: 210rpx;
+  height: 300rpx;
+}
+
+.avatars{
+  padding-top: 20rpx; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatars>view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-info,.movie-description-container,movie-avatars-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title{
+  font-size: 34rpx;
+}
+
+.movie-info{
+  padding-left: 30rpx;
+}
+
+.movie-in-theater{
+  padding: 10rpx 0 0;
+  color: #8b8b8b;
+}
+
+
+
+.movie-rating,.movie-count{
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.movie-count{
+  padding: 30rpx 0;
+}
+
+.movie-count text{
+  padding: 0 60rpx 0 20rpx; 
+}
+
+text.title{
+  font-size: 34rpx;
+}
+
+.movie-description-container{
+  padding: 40rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.movie-avatars-container{
+  padding-top: 40rpx;
+}
+
+.description{
+  padding-top: 20rpx;
+}

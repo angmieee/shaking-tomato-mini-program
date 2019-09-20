@@ -1,0 +1,64 @@
+/* pages/movie/movie.wxss */
+@import "../template/template.wxss";
+
+page{
+  background-color: #eee; 
+}
+.movies-banner{
+  width: 100%;
+  height: 400rpx;
+}
+
+.movies-banner image{
+  width: 100%;
+}
+
+.coming-soon-container{
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.movie-container-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.coming{
+  font-size: 36rpx;
+  padding: 20rpx;
+}
+
+.more{
+  font-size: 28rpx;
+  color: #b2b2b2;
+  padding: 20rpx;
+}
+
+.movie-list{
+  padding: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.top250-container{
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.movie-search-container{
+  padding: 20rpx 10rpx 0;
+  
+}
+
+.movie-search-container input{
+  background-color: white;
+  padding: 10rpx 36rpx;
+  border-radius: 60rpx;
+}
+
+.movie-search-detail-container{
+  background-color: white;
+  margin-top: 20rpx;
+}

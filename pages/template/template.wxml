@@ -1,0 +1,38 @@
+<wxs src="../wxs/rating.wxs" module="logic"/>
+
+<template name="newsItem">
+  <view class="news-item" bindtap="onOpenNewsDetail" data-index-id="{{index}}">
+    <view class="item-head">
+      <image class="author-image" src="{{item.writersUrl}}"></image>
+      <text class="author">{{item.writers}}</text>
+      <text class="public-date">发表于{{item.publishDateStr}}</text>
+    </view>
+    <text class="item-title">{{item.title}}</text>
+    <image class="news-image" src="{{item.newsUrl}}"></image>
+    <text class="description">{{item.description}}</text>
+  </view>
+</template>
+
+<template name="ratingStar">
+  <view class="movie-rating">
+        <block wx:for="{{[1,2,3,4,5]}}" wx:key="index">
+          <image src="../../images/star_{{logic.ratingConvert(ratingAvg) >= item? 1 : 0 }}.png"></image>
+        </block>
+        <text>{{ratingAvg}}</text>
+  </view>
+</template>
+
+<template name="movieItem">
+  <view class="movie-item-container" bindtap="onOpenMovieDetail" data-movie-id="{{item.id}}">
+    <image class="movie-item-image" src="{{item.images.large}}" binderror="onImageError" data-index="{{index}}"></image>
+    <text class="movie-item-title">{{item.original_title}}</text>
+    <template is="ratingStar" data="{{ratingAvg:item.rating.average}}"></template>
+  </view>
+</template>
+
+<template name="loading">
+  <view class="loading">
+    <image src="/images/loading_ico.png"></image>
+    <text>正在获取更多电影...</text>
+  </view>
+</template>

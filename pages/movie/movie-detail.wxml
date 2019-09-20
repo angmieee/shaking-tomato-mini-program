@@ -1,0 +1,34 @@
+<!--pages/movie/movie-detail.wxml-->
+
+<import src="../template/template.wxml"/>
+
+<view class="movie-container">
+  <view class="movie-info-container">
+    <image class="movie-image" src="{{movieDetail.images.large}}" bindtap="onPreviewImage" data-image-url="{{movieDetail.images.large}}"></image>
+    <view class="movie-info">
+      <text class="movie-title">{{movieDetail.original_title}}</text>
+      <text class="movie-in-theater">{{movieDetail.countries[0]}} / {{movieDetail.genres[0]}},{{movieDetail.genres[1]}} / {{movieDetail.year}}上映</text>
+      <text> > </text>
+      <template is="ratingStar" data="{{ratingAvg:movieDetail.rating.average}}"></template>
+      <view class="movie-count">
+        <image src="../../images/wish.png"></image>
+        <text>{{movieDetail.wish_count}}</text>
+        <image src="../../images/comments.png"></image>
+        <text>{{movieDetail.comments_count}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="movie-description-container">
+    <text class="title">电影简介</text>
+    <text class="description">{{movieDetail.summary}}</text>
+  </view>
+  <view class="movie-avatars-container">
+    <text class="title">影人信息</text>
+    <view class="avatars">
+      <view wx:for="{{movieDetail.casts}}" wx:key="{{index}}">
+        <image src="{{item.avatars.large}}" bindtap="onPreviewImage" data-image-url="{{item.avatars.large}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
