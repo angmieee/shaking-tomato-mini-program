@@ -1,7 +1,7 @@
 <!--pages/movie/movie.wxml-->
 <import src="../template/template.wxml"/>
 
-<swiper indicator-dots="true" autoplay="true" class="movies-banner">
+<swiper indicator-dots="true" autoplay="true" indicator-active-color="#f45d8f" indicator-color="white" class="movies-banner">
   <swiper-item wx:for="{{inTheatersList}}" wx:key="{{index}}" bindtap="onOpenMovieDetail" data-movie-id="{{item.id}}">
     <image src="{{item.images.large}}" mode="aspectFill"></image>
   </swiper-item>

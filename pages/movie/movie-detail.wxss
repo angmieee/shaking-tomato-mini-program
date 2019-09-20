@@ -3,7 +3,7 @@
 
 .movie-container{
   padding: 30rpx;
-  background-color: #eee;
+  background-color: rgba(135, 182, 69, 0.062);
 }
 
 .movie-image{
